@@ -1,0 +1,278 @@
+// 2020-09-23 Lianne (Edit)
+$font-size-main: 36px;
+$font-size-title: 24px;
+$color-main: #000;
+$color-sub: #aaa;
+$color: #eee;
+
+#news {
+  height: 100vh;
+  background-image: url(../img/home-news.jpg);
+  .news-title {
+    text-align: center;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    padding-left: 5px;
+    padding-top: 20px;
+  }
+
+  #news-sec {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding-top: 50px;
+
+    .news-box {
+      border: 2px solid #eee;
+      height: 500px;
+      margin: 0 20px;
+      .month {
+        color: #024679;
+        margin: 0 auto;
+        width: 120px;
+        background: #eee;
+        padding: 5px;
+        margin-top: -30px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        h3 {
+          font-size: $font-size-title;
+          text-align: center;
+        }
+        p {
+          text-align: center;
+          // padding: 10px;
+        }
+      }
+      .content {
+        border: 1.5px solid none;
+        transition: 0.3s;
+        &:hover {
+          display: block;
+          background-image: url(../img/742742111.jpg);
+          background-size: cover;
+          background-position: center;
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+          animation-name: silder;
+          animation-duration: 2s;
+          position: relative;
+          animation-fill-mode: forwards;
+          @keyframes silder {
+            0% {
+              opacity: 0;
+            }
+            0% {
+              bottom: -100px;
+            }
+            75% {
+              bottom: 0px;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+          h1, h2, p {
+            animation-name: mymove;
+            animation-duration: 1s;
+            position: relative;
+            animation-fill-mode: forwards;
+            animation-direction:alternate;
+            @keyframes mymove {
+              0% {
+                top: 0px;
+              }
+              75% {
+                top: -100px;
+              }
+              100% {
+                opacity: 0;
+              }
+            }
+          }
+        }
+        h2 {
+          margin-top: 60px;
+          padding-right: 10px;
+        }
+        h1 {
+          font-size: $font-size-main;
+          padding: 20px;
+        }
+        p {
+          padding: 30px;
+          line-height: 1.5;
+        }
+      }
+      hr {
+        border: 1px solid $color;
+        width: 50px;
+        margin: 10px auto;
+        height: 1px;
+      }
+      a {
+        display: block;
+        border: 1px solid #eee;
+        margin: 20px auto;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: $color-main;
+        transition: 0.5s;
+        background: #eee;
+        width: 150px;
+        &:hover {
+          color: $color-sub;
+        }
+      }
+    }
+  }
+}
+
+
+// 2020-09-22 Andy (Originator)
+// #news-sec {
+//   background-color: #eee;
+//   height: 900px;
+//   background-image: url(../img/body.jpg);
+// }
+
+// #title {
+//   text-align: center;
+//   line-height: 1.5;
+//   color: #fff;
+
+//   h1 {
+//     font-size: 48px;
+//     font-weight: 100;
+//     letter-spacing: 5px;
+//   }
+//   p {
+//     padding: 0px;
+//   }
+// }
+
+// #news {
+//   width: 100%;
+//   margin: 0 auto;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   grid-gap: 15px;
+//   padding: 70px 0;
+//   text-align: center;
+
+  // .news-box {
+  //   background: none;
+  //   border: 1px solid #000;
+  //   height: 600px;
+  //   margin: 0 20px;
+  //   hr {
+  //     // border: 1px solid $color;
+  //     border: 1px solid #000;
+  //     width: 50px;
+  //     margin: 10px auto;
+  //     height: 1px;
+  //   }
+
+    // a {
+    //   display: block;
+    //   border: 1px solid #eee;
+    //   margin: 45px auto;
+    //   text-decoration: none;
+    //   color: $color-main;
+    //   transition: 0.5s;
+    //   background: #eee;
+    //   width: 150px;
+
+    //   // &:hover {
+    //   //   color: $color-sub;
+    //   // }
+    // }
+    // .content {
+    //   border: 1.5px solid none;
+    //   transition: 0.3s;
+    //   height: 450px;
+    //   width: 470px;
+    //   margin: -20px auto;
+
+    //   &:hover {
+    //     display: block;
+    //     background-image: url(../img/742742111.jpg);
+    //     height: 450px;
+    //     width: 470px;
+    //     background-size: cover;
+    //     background-position: center;
+    //     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    //     animation-name: silder;
+    //     animation-duration: 2s;
+    //     position: relative;
+    //     animation-fill-mode: forwards;
+    //     @keyframes silder {
+    //       0% {
+    //         opacity: 0;
+    //       }
+    //       0% {
+    //         bottom: -100px;
+    //       }
+    //       75% {
+    //         bottom: 0px;
+    //       }
+    //       100% {
+    //         opacity: 1;
+    //       }
+    //     }
+
+    //     h1,
+    //     h2,
+    //     p {
+    //       animation-name: mymove;
+    //       animation-duration: 1s;
+    //       position: relative;
+    //       animation-fill-mode: forwards;
+    //       @keyframes mymove {
+    //         0% {
+    //           top: 0px;
+    //         }
+    //         75% {
+    //           top: -100px;
+    //         }
+    //         100% {
+    //           opacity: 0;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+  // }
+
+
+// .month {
+//   margin: 0 auto;
+//   border: 1px solid #eee;
+//   width: 120px;
+//   background: #eee;
+//   padding: 5px;
+//   margin-top: -30px;
+//   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+//   h3 {
+//     // font-family: $font-family-main;
+//     font-size: $font-size-title;
+//   }
+//   p {
+//     padding: 10px;
+//   }
+// }
+
+// h2 {
+//   margin-top: 60px;
+//   padding-right: 10px;
+// }
+// p {
+//   padding: 30px;
+//   line-height: 1.5;
+// }
+// h1 {
+//   font-size: $font-size-main;
+//   padding: 20px;
+// }
+// }

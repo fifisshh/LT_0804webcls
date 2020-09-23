@@ -1,0 +1,262 @@
+// 2020-09-18 by Fifisshh
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
+@import "banner";
+@import "news";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC";
+}
+
+// Navbar Start
+#navbar {
+  position: fixed;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  width: 100vw;
+  height: 70px;
+  padding: 5px 5vw;
+  z-index: 1;
+  transition: 0.4s ease-out;
+
+  .link {
+    float: left;
+    padding-top: 25px;
+  }
+  .link ul {
+    display: flex;
+    list-style: none;
+    li {
+      // border: 1px solid #000;
+      // width: 100px;
+      // height: 30px;
+      overflow: hidden;
+      .en,
+      .ch {
+        position: relative;
+        transition: opacity 0.3s;
+      }
+      .en {
+        display: flex;
+        justify-content: center;
+        letter-spacing: 5px;
+      }
+      .ch {
+        position: absolute;
+        top: 27px;
+        // visibility: hidden;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        letter-spacing: 3px;
+      }
+      a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 0 10px;
+        color: snow;
+        &:hover .en {
+          // visibility: hidden;
+          opacity: 0;
+        }
+        &:hover .ch {
+          // visibility: visible;
+          opacity: 1;
+          z-index: 99;
+          // margin-top: -1px;
+        }
+      }
+    }
+  }
+
+  .brand a {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background-image: url(../img/LTlogo2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+  }
+
+  .order {
+    float: right;
+    padding-top: 25px;
+    a {
+      padding: 0 10px;
+      img {
+        width: 20px;
+        height: 20px;
+        filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(342deg) brightness(104%) contrast(102%);
+      }
+    }
+  }
+
+  &.scrolled {
+    height: 70px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
+// navbar End
+
+// Section1-_banner.scss
+
+// Section2-About
+#about{
+    background-image: url(../img/wengang-zhai-Q54761KjjnI-unsplash.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 50px;
+    padding: 150px 0;
+
+    #about-left{
+    height: 600px;
+    }
+
+    #about-right{
+        width: 450px;
+        padding: 50px;
+        height: 450px;
+        border: 1px solid #fff;
+
+        h1{
+            color: white;
+            padding-bottom: 20px;
+            margin-top: 50px;
+        }
+
+        p{
+            color: white;
+            padding: 20px 0;
+            padding-bottom: 50px;
+        }
+
+        a{
+            background: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            color: black;
+            border-radius: 20px;
+            transition: 0.3s;
+            &:hover {
+              color: #eee;
+            }
+        }
+    }
+}
+
+
+
+
+// Section3-Dessert
+.dessert {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/dessert_bg.jpg);
+  background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  .desc h2 {
+    font-family: "Caveat Brush", cursive;
+    font-size: 100px;
+    text-align: center;
+    padding-top: 50px;
+    color: #024679;
+  }
+  .desc p {
+    // display: inline-block;
+    font-size: 20px;
+    width: 500px;
+    margin: 450px auto 10px;
+    font-size: 14px;
+    color: #666;
+  }
+}
+
+
+// Section4-_news.scss
+
+/* 頁尾 */
+footer {
+  // margin: 0;
+  padding: 20px 0 5px;
+  // background-color: #024679;
+  background: snow;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.footer-logo {
+  // border: 1px solid #000;
+  width: 300px;
+  height: 70px;
+  display: inline-block;
+  background-image: url(../img/LTlogo-full.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.5s;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+footer span {
+  color: #024679;
+  padding-left: 100px;
+  line-height: 60px;
+  font-size: 32px;
+}
+
+.footer-logo:hover {
+  opacity: 0.4;
+}
+
+.footer-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 10px 0;
+}
+.footer-block h3 {
+  color: #024679;
+  font-weight: 100;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+.footer-block h4 {
+  color: #024679;
+  line-height: 18px;
+  font-size: 14px;
+}
+.footer-block hr {
+  width: 70px;
+  margin: -15px auto 10px;
+  border: 1px solid #024679;
+}
+
+footer p {
+  color: #024679;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.f-b3 a {
+  display: inline-block;
+  padding: 0 10px 0;
+  filter: opacity(100%);
+  transition: 0.5s;
+}
+
+.f-b3 a:hover {
+  opacity: 0.4;
+}
