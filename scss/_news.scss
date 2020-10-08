@@ -36,6 +36,7 @@ $color: #eee;
         padding: 5px;
         margin-top: -30px;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
         h3 {
           font-size: $font-size-title;
           text-align: center;
@@ -49,6 +50,7 @@ $color: #eee;
         border: 1.5px solid none;
         transition: 0.3s;
         &:hover {
+          transition: 0.5s;
           display: block;
           background-image: url(../img/742742111.jpg);
           background-size: cover;
@@ -121,6 +123,7 @@ $color: #eee;
         transition: 0.5s;
         background: #eee;
         width: 150px;
+        border-radius: 20px;
         &:hover {
           color: $color-sub;
         }

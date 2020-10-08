@@ -2,12 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
 #banner {
-  height: 100vh;
-  background-image: url(../img/banner.jpg);
+  height: 120vh;
+  background-image: url(../img/bg3.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,6 +66,7 @@
   margin-top: -30px;
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 #news #news-sec .news-box .month h3 {
@@ -85,6 +85,8 @@
 }
 
 #news #news-sec .news-box .content:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   display: block;
   background-image: url(../img/742742111.jpg);
   background-size: cover;
@@ -200,6 +202,7 @@
   transition: 0.5s;
   background: #eee;
   width: 150px;
+  border-radius: 20px;
 }
 
 #news #news-sec .news-box a:hover {
@@ -226,7 +229,12 @@
 
 #navbar .link {
   float: left;
-  padding-top: 25px;
+  padding-top: 22px;
+  position: absolute;
+  left: 250px;
+  top: 0;
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
 }
 
 #navbar .link ul {
@@ -259,7 +267,7 @@
 
 #navbar .link ul li .ch {
   position: absolute;
-  top: 27px;
+  top: 22px;
   opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -271,9 +279,10 @@
 }
 
 #navbar .link ul li a {
+  font-size: 14px;
   text-decoration: none;
   display: inline-block;
-  padding: 0 10px;
+  padding: 0 15px;
   color: snow;
 }
 
@@ -290,7 +299,7 @@
   width: 60px;
   height: 60px;
   display: inline-block;
-  background-image: url(../img/LTlogo2.png);
+  background-image: url(../img/logov3.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -298,11 +307,48 @@
   left: 50%;
   -webkit-transform: translatex(-50%);
           transform: translatex(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#navbar .brand a:hover {
+  opacity: 0.78;
+}
+
+#navbar .icon {
+  float: right;
+  padding-right: 70px;
+  -webkit-filter: invert(99%) sepia(99%) saturate(5%) hue-rotate(300deg) brightness(108%) contrast(99%);
+          filter: invert(99%) sepia(99%) saturate(5%) hue-rotate(300deg) brightness(108%) contrast(99%);
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
+}
+
+#navbar .icon img {
+  width: 20px;
+}
+
+#navbar .verline {
+  display: block;
+  width: 2px;
+  height: 15px;
+  background: #fff;
+  position: relative;
+  top: 22px;
+  left: 1230px;
 }
 
 #navbar .order {
   float: right;
   padding-top: 25px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
 }
 
 #navbar .order a {
@@ -312,8 +358,8 @@
 #navbar .order a img {
   width: 20px;
   height: 20px;
-  -webkit-filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(342deg) brightness(104%) contrast(102%);
-          filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(342deg) brightness(104%) contrast(102%);
+  -webkit-filter: invert(99%) sepia(99%) saturate(5%) hue-rotate(300deg) brightness(108%) contrast(99%);
+          filter: invert(99%) sepia(99%) saturate(5%) hue-rotate(300deg) brightness(108%) contrast(99%);
 }
 
 #navbar.scrolled {
@@ -322,84 +368,91 @@
 }
 
 #about {
-  background-image: url(../img/wengang-zhai-Q54761KjjnI-unsplash.jpg);
   width: 100%;
-  height: 100vh;
+  height: 90vh;
+  background-color: white;
   background-size: cover;
-  background-position: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3fr 2fr;
-      grid-template-columns: 3fr 2fr;
-  grid-gap: 50px;
-  padding: 150px 0;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding: 100px 0 100px 0;
 }
 
 #about #about-left {
   height: 600px;
+  width: 600px;
+  background-image: url(../img/wengang-zhai-Q54761KjjnI-unsplash.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 100px;
 }
 
 #about #about-right {
   width: 450px;
   padding: 50px;
   height: 450px;
-  border: 1px solid #fff;
+  margin-left: 100px;
 }
 
 #about #about-right h1 {
-  color: white;
+  color: gray;
   padding-bottom: 20px;
   margin-top: 50px;
 }
 
 #about #about-right p {
-  color: white;
+  color: gray;
   padding: 20px 0;
   padding-bottom: 50px;
 }
 
 #about #about-right a {
-  background: white;
   padding: 8px 15px;
   text-decoration: none;
-  color: black;
   border-radius: 20px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: #C4BDAC;
+  color: white;
+  border: none;
 }
 
 #about #about-right a:hover {
-  color: #eee;
+  opacity: 0.5;
 }
 
 .dessert {
   width: 100vw;
   height: 100vh;
-  background-image: url(../img/dessert_bg.jpg);
+  background-image: url(../img/wood.jpg);
   background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.dessert .desc h2 {
-  font-family: "Caveat Brush", cursive;
-  font-size: 100px;
-  text-align: center;
-  padding-top: 50px;
-  color: #024679;
+.dessert .desc .title {
+  height: 300px;
+  width: 800px;
+  background-image: url(../img/dessert.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 300px;
 }
 
 .dessert .desc p {
   font-size: 20px;
   width: 500px;
-  margin: 450px auto 10px;
+  margin: 300px auto 10px;
   font-size: 14px;
   color: #666;
+  text-align: center;
 }
 
 /* 頁尾 */
 footer {
   padding: 20px 0 5px;
-  background: snow;
-  margin-top: 50px;
+  background: #FBF7F0;
   text-align: center;
 }
 
@@ -417,51 +470,24 @@ footer {
   text-decoration: none;
 }
 
-footer span {
-  color: #024679;
-  padding-left: 100px;
-  line-height: 60px;
-  font-size: 32px;
-}
-
 .footer-logo:hover {
   opacity: 0.4;
 }
 
-.footer-block {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  margin: 10px 0;
-}
-
-.footer-block h3 {
-  color: #024679;
-  font-weight: 100;
-  font-size: 14px;
-  margin-bottom: 30px;
-}
-
 .footer-block h4 {
   color: #024679;
-  line-height: 18px;
+  line-height: 25px;
+  font-weight: 300;
   font-size: 14px;
 }
 
-.footer-block hr {
-  width: 70px;
-  margin: -15px auto 10px;
-  border: 1px solid #024679;
+.icon img {
+  width: 32px;
+  display: inline-block;
+  padding-top: 25px;
 }
 
-footer p {
-  color: #024679;
-  font-size: 14px;
-  margin-top: 30px;
-}
-
-.f-b3 a {
+.icon a {
   display: inline-block;
   padding: 0 10px 0;
   -webkit-filter: opacity(100%);
@@ -470,7 +496,19 @@ footer p {
   transition: 0.5s;
 }
 
-.f-b3 a:hover {
+.icon a:hover {
   opacity: 0.4;
+}
+
+footer hr {
+  width: 100%;
+  margin: 20px auto -10px;
+  opacity: 0.3;
+}
+
+footer p {
+  color: #024679;
+  font-size: 14px;
+  margin-top: 20px;
 }
 /*# sourceMappingURL=style.css.map */
