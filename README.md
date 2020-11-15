@@ -8,3 +8,5 @@ section1(header)/section3(carousel) ...done
 1. Home page_v1
 Items:
 nav/footer/section*4(header/about/carousel/news)
+
+１１／１５ 測試推送
