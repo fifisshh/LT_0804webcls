@@ -64,7 +64,11 @@
   left: -180px;
 }
 
-#banner span {
+#banner .scroll {
+  cursor: pointer;
+}
+
+#banner .scroll span {
   position: absolute;
   left: 50%;
   bottom: 240px;
@@ -110,7 +114,7 @@
   }
 }
 
-#banner p {
+#banner .scroll p {
   color: white;
   position: absolute;
   left: 50%;

@@ -11,6 +11,7 @@ window.addEventListener('scroll', ()=> {
     }
 })
 
+
 // about圓形微互動
 $(window).bind('scroll',function(e){
     parallaxScroll();
@@ -22,6 +23,7 @@ function parallaxScroll(){
     $('.cirs1-home img').css('top',(650-(scrolled*.1))+'px');
     $('.cir2-home').css('top',(1800-(scrolled*.5))+'px');
     $('.cirs2-home img').css('top',(250-(scrolled*.1))+'px');
+    $('.textbg-home').css('top',(1200-(scrolled*.5))+'px');
 }
 
 // Order alert
