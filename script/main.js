@@ -33,11 +33,12 @@ $(".order").click(function(){
 
 // Loading
 $(window).on('load', function(){
-    setTimeout(removeLoader, 2500);
+    setTimeout(removeLoader, 2000);
     // wait for page load PLUS two seconds.
 });
   function removeLoader(){
-      $( ".loader" ).fadeOut(500, function() {
+    $( ".loader" ).fadeOut(2000);
+    $(".img").delay(500).fadeIn(1600, function() {
         // fadeOut complete. Remove the loading div
         $( ".container" ).remove(); //makes page more lightweight 
         document.getElementById("wrapper").style.display = "block";
